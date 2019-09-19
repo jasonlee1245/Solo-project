@@ -1,0 +1,60 @@
+body {
+  background: #D0ECF2;
+  font-size: 16px;
+}
+
+button {
+  border-radius: 5px;
+  padding: 5px 15px;
+  margin: 0 10px;
+  background-color: #0455BF;
+  color: #D0ECF2;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #D0ECF2;
+  color:#0455BF;
+}
+
+input {
+  text-align: center;
+}
+
+.title {
+  text-align: center;
+  color: #020659
+}
+
+.centeredBox {
+  text-align: center
+}
+
+.main {
+  width: 100%
+}
+
+#rows {
+  padding: 20px 0;
+}
+
+.input {
+  width: 12.5%;
+  background-color: #F2F2F2;
+  color: #4557BF
+}
+
+.company, .rowHeader {
+  width: 12.5%;
+  color: #020659;
+  font-weight: bold;
+}
+
+.delInput {
+  width: 12.5%;
+}
+
+.delInput button {
+  color: #048ABF;
+
+}

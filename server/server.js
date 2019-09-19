@@ -1,7 +1,8 @@
 const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
-const db = require('./queries')
+const api = require('./routes/api.js');
+const db = require('./controllers/queries');
 const app = express();
 const PORT = 3000;
 
@@ -12,10 +13,13 @@ app.use(
   })
 )
 
-app.get('/', db.createTable, db.getApps, function(req, res) {
-  const index = path.resolve(__dirname, '../index.html')
-  res.sendFile(index)
+app.use('/api', api); 
+app.use('/build', express.static(path.join(__dirname,"../build")))
+app.get('/', db.createTable, function(req, res) {
+  const index = path.resolve(__dirname, '../index.html');
+  res.sendFile(index);
 })
+
 app.all('*', (req, res) => {
   res.sendStatus(404);
 });
